@@ -11,13 +11,16 @@ public class Main {
         int n = Integer.parseInt(br.readLine());
         String s = br.readLine();
         
-        int sum = 0;
+        int r = 31;
+        int m = 1234567891;
+        long sum = 0;
+        long mod = 1;
         for(int i=0; i < s.length(); i++) {
             char ch = s.charAt(i);
-            int num = ch - 'a' + 1;
-            sum += num * Math.pow(31, i);
+            sum += (((int)((s.charAt(i) - 'a'))+1) * mod);
+            mod = (r * mod) % m;
         }
-        bw.write(String.valueOf(sum));
+        bw.write(String.valueOf(sum % m));
         bw.flush();
         bw.close();
     }
