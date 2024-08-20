@@ -23,7 +23,7 @@ public class Main {
             } else {
                 day += ((v-a)/(a-b) + 1);
             }
-        }  
+        }
    
         bw.write(String.valueOf(day));
         bw.flush();
