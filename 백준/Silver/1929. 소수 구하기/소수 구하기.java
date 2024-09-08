@@ -7,25 +7,25 @@ public class Main {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringTokenizer st = new StringTokenizer(br.readLine());
 
-        int N = Integer.parseInt(st.nextToken());
         int M = Integer.parseInt(st.nextToken());
+        int N = Integer.parseInt(st.nextToken());
 
-        Boolean[] isPrime = new Boolean[M+1];
+        Boolean[] isPrime = new Boolean[N+1];
 
         for(int i = 0; i < isPrime.length; i++) {
             isPrime[i] = true;
         }
         isPrime[0] = isPrime[1] = false;
 
-        for (int i = 2; i <= Math.sqrt(M); i++) {
+        for (int i = 2; i <= Math.sqrt(N); i++) {
             if(isPrime[i]) {
-                for(int j = i*i; j <= M; j += i) {
+                for(int j = i*i; j <= N; j += i) {
                     isPrime[j] = false;
                 }
             }
         }
 
-        for (int i = N; i < isPrime.length; i++) {
+        for (int i = M; i < isPrime.length; i++) {
             if(isPrime[i]) {
                 bw.write(String.valueOf(i)+"\n");
             }
