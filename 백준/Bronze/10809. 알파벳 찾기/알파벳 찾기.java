@@ -1,14 +1,12 @@
 import java.io.*;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
         int[] arr = new int[26];
-        
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = -1;
-        }
+        Arrays.fill(arr, -1);
 
         String str = br.readLine();
 
@@ -18,7 +16,7 @@ public class Main {
                 arr[c - 'a'] = i;
             }
         }
-        
+
         for (int i : arr) {
             sb.append(i).append(" ");
         }
