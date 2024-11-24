@@ -4,7 +4,6 @@ import java.util.*;
 public class Main {
     static int N;
     static int M;
-    static boolean[] visited;
     static int[] arr;
     static int[] result;
     static StringBuilder sb;
@@ -16,7 +15,6 @@ public class Main {
 
         N = Integer.parseInt(st.nextToken());
         M = Integer.parseInt(st.nextToken());
-        visited = new boolean[N];
         arr = new int[N];
         result = new int[M];
 
