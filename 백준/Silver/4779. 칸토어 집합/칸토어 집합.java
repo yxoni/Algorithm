@@ -25,13 +25,11 @@ public class Main {
         int num = n / 3;
 
         String[] str = new String[num];
-        String[] str1;
-        String[] str2;
         Arrays.fill(str, " ");
 
         if (num == 1) {
-            str1 = new String[num];
-            str2 = new String[num];
+            String[] str1 = new String[num];
+            String[] str2 = new String[num];
             Arrays.fill(str1, "-");
             Arrays.fill(str2, "-");
 
