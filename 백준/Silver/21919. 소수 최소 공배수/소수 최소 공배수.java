@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.StringTokenizer;
 
 public class Main {
-    private static final int SIZE = 2_000_001;
+    private static final int SIZE = 1_000_001;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
