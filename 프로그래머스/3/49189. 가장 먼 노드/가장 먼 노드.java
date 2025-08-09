@@ -1,5 +1,5 @@
-import java.util.*;
 import java.io.*;
+import java.util.*;
 
 class Solution {
     public int solution(int n, int[][] edge) {
@@ -7,7 +7,7 @@ class Solution {
         
         int max = Arrays.stream(dist)
             .max()
-            .orElse(0); 
+            .orElse(0);
         int answer = (int) Arrays.stream(dist)
             .filter(i -> i == max)
             .count();
@@ -19,7 +19,7 @@ class Solution {
         int[] dist = new int[n + 1];
         Arrays.fill(dist, Integer.MAX_VALUE);
         dist[0] = -1;
-        dist[1] = 1;
+        dist[1] = 0;
         PriorityQueue<Node> q = new PriorityQueue<>();
         q.offer(new Node(1, 0));
         
@@ -50,8 +50,8 @@ class Solution {
         }
         
         @Override
-        public int compareTo(Node o) {
-            return this.dist - o.dist;
+        public int compareTo(Node e) {
+            return this.dist - e.dist;
         }
     }
 }
