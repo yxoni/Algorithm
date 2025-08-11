@@ -10,34 +10,32 @@ public class Main {
     String str = br.readLine();
 
     int b = 1;
-    boolean flag = false;
+    int r = 1;
+    boolean bFlag = false;
+    boolean rFlag = false;
+
     for (int i = 0; i < N; i++) {
       if (str.charAt(i) == 'B') {
-        flag = true;
+        bFlag = true;
       }
-
-      if (flag && str.charAt(i) == 'R') {
-        flag = false;
+      if (bFlag && str.charAt(i) == 'R') {
+        bFlag = false;
         b++;
       }
-    }
-    if (flag) {
-      flag = false;
-      b++;
-    }
 
-    int r = 1;
-    for (int i = 0; i < N; i++) {
       if (str.charAt(i) == 'R') {
-        flag = true;
+        rFlag = true;
       }
-
-      if (flag && str.charAt(i) == 'B') {
-        flag = false;
+      if (rFlag && str.charAt(i) == 'B') {
+        rFlag = false;
         r++;
       }
     }
-    if (flag) {
+
+    if (bFlag) {
+      b++;
+    }
+    if (rFlag) {
       r++;
     }
 
